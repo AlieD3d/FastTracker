@@ -36,6 +36,9 @@ def login(request):
     return render(request, 'tracker/login.html')
 
 
+def registration(request):
+    return render(request, 'tracker/registration.html')
+
 def contact(request):
     return render(request, 'tracker/contact.html')
 
