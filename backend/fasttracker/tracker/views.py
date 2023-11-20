@@ -36,9 +36,14 @@ def login(request):
     return render(request, 'tracker/login.html')
 
 
+def registration(request):
+    return render(request, 'tracker/registration.html')
+
 def contact(request):
     return render(request, 'tracker/contact.html')
 
 
 def page_not_found(request, exception):
     return HttpResponseNotFound(f"<h1> Страница не найдена :( </h1>")
+
+
