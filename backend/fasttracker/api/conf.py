@@ -10,7 +10,9 @@ UPDATE_METHODS = ('PUT', 'PATCH')
 
 SEARCH_TASK_NAME = 'name'
 
-FAVORITE = 'is_favorited'
+SUBSCRIBE_M2M = 'subscribe'
+
+FAVORITE_M2M = 'is_favorited'
 
 AUTHOR = 'author'
 
