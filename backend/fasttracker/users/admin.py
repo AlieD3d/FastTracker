@@ -1,5 +1,4 @@
 from django.contrib.admin import register
-from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 from users.models import CustomUser
 
@@ -21,3 +20,4 @@ class CustomUserAdmin(UserAdmin):
         'first_name', 'email'
     )
     save_on_top = True
+
