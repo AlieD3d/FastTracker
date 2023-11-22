@@ -1,22 +1,30 @@
-from django.contrib.admin import register
+from django.contrib.admin import register, ModelAdmin
 from django.contrib.auth.admin import UserAdmin
-from users.models import CustomUser
+
+from tasks.models import Post, Category
 
 
-@register(CustomUser)
-class CustomUserAdmin(UserAdmin):
+@register(Post)
+class PostAdmin(ModelAdmin):
     list_display = (
-        'username', 'first_name', 'last_name', 'email',
+        'pk',
+        'pub_date',
+        'author',
+        'categories',
+
     )
-    fields = (
-        ('username', 'email'),
-        ('first_name', 'last_name'),
+    search_fields = ('text',)
+    list_filter = ('pub_date',)
+    empty_value_display = '-пусто-'
+
+
+@register(Category)
+class CategoryAdmin(ModelAdmin):
+    list_display = (
+        'title',
+        'slug',
     )
-    fieldsets = []
-    search_fields = (
-        'username', 'email'
-    )
-    list_filter = (
-        'first_name', 'email'
-    )
-    save_on_top = True
+    prepopulated_fields = {'slug': ('title',)}
+    search_fields = ('slug',)
+    list_filter = ('title',)
+    empty_value_display = '-пусто-'
