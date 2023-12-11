@@ -1,0 +1,66 @@
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+@media (min-width: 200px)
+{
+    .btn-box {
+        position: absolute;
+        top: 225px;
+        left: 32px;
+        z-index: 3;
+        width: 122px;
+        height: 44px;
+        overflow: hidden;
+        background: #fed42b;
+        border-radius: 5.2px;
+        opacity: 1;
+        transition: 0.3s;
+    }
+}
+
+@media (max-width: 425px){
+    .btn-text {
+        top: 14px;
+        left: 26px;
+        width: 70px;
+        height: 16px;
+    }
+}
+
+@media (min-width: 200px) {
+    .btn-text {
+        position: absolute;
+        z-index: 1;
+    }
+}
+
+.btn-text {
+    width: 70px;
+    height: 13px;
+    
+}
+
+@media (max-width: 425px){
+    .card {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        z-index: 1;
+        width: 300px;
+        transform: translate(50%);
+    }
+}
+
+@media (min-width: 200px){
+    .card {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        z-index: 1;
+        width: 300px;
+        transform: translate(-50%);
+    }
+}
