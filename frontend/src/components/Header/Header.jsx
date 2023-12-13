@@ -5,6 +5,8 @@ import IconButton from '@mui/material/IconButton';
 import AppBar  from '@mui/material/AppBar';
 import MenuPopupState from '../Menu/Menu';
 import SearchInput from '../SearchInput/SearchInput';
+import { Link } from 'react-router-dom';
+import './Header.css';
 
 export default function Header() {
     return (
@@ -24,10 +26,14 @@ export default function Header() {
                     component='div'
                     sx={{ flexGrow: 1, mr: 2 }}
                 >
-                    FastTracker
+                    <Link to='/' className='link__logo'>
+                        FastTracker
+                    </Link>
                 </Typography>
                 <SearchInput />
-                <Button color='inherit'>Войти</Button>
+                <Link to='/login' className='link__login'>
+                    <Button color='inherit'>Войти</Button>
+                </Link>    
             </Toolbar>
         </AppBar>
     );
