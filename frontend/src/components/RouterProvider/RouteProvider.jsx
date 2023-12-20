@@ -1,12 +1,13 @@
 import React from "react";
 import { Routes, Route } from 'react-router-dom';
+import Signup from "../SignupForm/SignupForm";
 
 
 export default function RouteProvider(){
     return(
         <Routes>
             <Route path="/" element={<Home/>} />
-            <Route path="/login" element={<Login/>} />
+            <Route path="/signup" element={<Signup/>} />
             <Route path="/reset" element={<PasswordReset/>} />
             <Route path="/dashboard" element={<Dashboard/>} />
             <Route path="/createtask" element={<CreateTask/>} />
