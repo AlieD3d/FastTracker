@@ -31,8 +31,8 @@ export default function Header() {
                     </Link>
                 </Typography>
                 <SearchInput />
-                <Link to='/login' className='link__login'>
-                    <Button color='inherit'>Войти</Button>
+                <Link to='/signup' className='link__login'>
+                    <Button color='inherit'>Регистрацимя</Button>
                 </Link>    
             </Toolbar>
         </AppBar>
