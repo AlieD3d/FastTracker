@@ -10,8 +10,6 @@ export default function Main(){
     const { container } = useStyles();
 
     return(
-        <Container className={container}>
-            <RouteProvider />
-        </Container>
+        <RouteProvider />
     );
 }
