@@ -1,6 +1,7 @@
 import React from "react";
 import { Routes, Route } from 'react-router-dom';
 import Signup from "../SignupForm/SignupForm";
+import Login from "../Login/Login";
 
 
 export default function RouteProvider(){
@@ -8,6 +9,7 @@ export default function RouteProvider(){
         <Routes>
             <Route path="/" element={<Home/>} />
             <Route path="/signup" element={<Signup/>} />
+            <Route path="/login" element={<Login/>} />
             <Route path="/reset" element={<PasswordReset/>} />
             <Route path="/dashboard" element={<Dashboard/>} />
             <Route path="/createtask" element={<CreateTask/>} />
@@ -17,9 +19,6 @@ export default function RouteProvider(){
     );
 }
 
-function Login(){
-    return <h2>Login</h2>
-}
 
 function PasswordReset() {
     return <h2>Password Reset</h2>
